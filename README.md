@@ -15,20 +15,20 @@ Controlado de forma segura
 
 Situações reais em que isso ocorre:
 
-✔ Gerenciador de Configurações
+Gerenciador de Configurações
 
 Aplicações precisam de configurações globais (arquivos .properties, .json, .env). Se varias instâncias modificassem configurações simultaneamente, haveria inconsistência.
 
-✔ Logger (Registro de Logs)
+Logger (Registro de Logs)
 
 Logs precisam ser centralizados para não gerar arquivos duplicados ou fora de ordem.
 
-✔ Conexão com Banco de Dados
+Conexão com Banco de Dados
 
 Criar múltiplas conexões sem controle pode esgotar recursos e travar o sistema.
 
-✔ Contador Global ou Gerenciador de Sessões
-✔ Acesso a Hardware ou Recursos Exclusivos
+Contador Global ou Gerenciador de Sessões
+Acesso a Hardware ou Recursos Exclusivos
 
 Por exemplo, acesso à impressora, câmera, serviços do sistema.
 
@@ -40,21 +40,21 @@ Como garantir que haverá apenas uma única instância, acessível globalmente, 
 
 O padrão Singleton oferece uma solução simples:
 
-✔ 1. Restringir a criação de instâncias
+1. Restringir a criação de instâncias
 
 O construtor é privado, impossibilitando new Singleton() no código externo.
 
-✔ 2. Criar uma instância estática dentro da própria classe
+2. Criar uma instância estática dentro da própria classe
 
 Essa instância será a única durante toda a execução.
 
-✔ 3. Fornecer um método de acesso global
+3. Fornecer um método de acesso global
 
 Geralmente chamado de:
 
 getInstance()
 
-✔ 4. Controle de concorrência (Thread-Safety)
+4. Controle de concorrência (Thread-Safety)
 
 Em sistemas multithread, duas threads poderiam criar instâncias simultâneas.
 
