@@ -70,6 +70,8 @@ Se a aplicação for simples, não exige thread-safety.
 
 1.3 — Diagrama UML do Singleton
 
+````md
+```mermaid
 classDiagram
     class Singleton {
         -instance : Singleton
